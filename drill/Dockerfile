@@ -1,6 +1,6 @@
-FROM mustafaakin/java
+FROM openjdk:8-jdk-alpine
 # Set versions
-ARG DRILL_LINK=http://ftp.itu.edu.tr/Mirror/Apache/drill/drill-1.8.0/apache-drill-1.8.0.tar.gz
+ARG DRILL_LINK=http://www-us.apache.org/dist/drill/drill-1.10.0/apache-drill-1.10.0.tar.gz
 ENV DRILL_HOME /opt/drill/
 
 # Download and extract, set home folder and permissions
