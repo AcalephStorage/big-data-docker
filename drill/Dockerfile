@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8-jdk
 # Set versions
 ARG DRILL_LINK=http://www-us.apache.org/dist/drill/drill-1.10.0/apache-drill-1.10.0.tar.gz
 ENV DRILL_HOME /opt/drill/
