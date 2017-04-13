@@ -12,7 +12,8 @@ RUN useradd -ms /bin/bash drill --home $DRILL_HOME &&  wget -qO- $DRILL_LINK | t
 # Remove conflicting log4j
 # RUN rm /opt/drill/jars/classb/logback-classic-1.0.13.jar
 
-# RUN wget -O /opt/drill/jars/3rdparty/hadoop-aws-3.0.0-alpha2.jar https://storage.googleapis.com/cloudblocks/artifacts/hadoop-aws-3.0.0-alpha2.jar
+RUN wget -O /opt/drill/jars/3rdparty/hadoop-aws-3.0.0-alpha2.jar https://storage.googleapis.com/cloudblocks/artifacts/hadoop-aws-3.0.0-alpha2.jar
+RUN rm /opt/drill/jars/3rdparty/hadoop-aws-2.7.1.jar
 
 ADD drill-override.conf $DRILL_HOME/conf/
 ADD entrypoint.sh $DRILL_HOME/
