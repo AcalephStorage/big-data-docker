@@ -7,7 +7,7 @@ ENV DRILL_HOME /opt/drill
 RUN useradd -ms /bin/bash drill --home $DRILL_HOME &&  wget -qO- $DRILL_LINK | tar xvz --strip 1 -C $DRILL_HOME && chown drill -R $DRILL_HOME
 
 # Download alluxio client jar
-RUN wget -O /opt/drill/jars/classb/alluxio-core-client-1.4.0-jar-with-dependencies.jar https://storage.googleapis.com/cloudblocks/artifacts/alluxio-core-client-1.4.0-jar-with-dependencies.jar
+RUN wget -O /opt/drill/jars/3rdparty/alluxio-core-client-1.4.0-jar-with-dependencies.jar https://storage.googleapis.com/cloudblocks/artifacts/alluxio-core-client-1.4.0-jar-with-dependencies.jar
 
 ADD drill-override.conf $DRILL_HOME/conf/
 ADD entrypoint.sh $DRILL_HOME/
